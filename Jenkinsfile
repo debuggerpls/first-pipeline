@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                  ls -alh
+                  ls -alh mk
                   pwd
                   make -C $PWD/mk B=$PWD/build/mk
                   export mk=$PWD/build/mk
