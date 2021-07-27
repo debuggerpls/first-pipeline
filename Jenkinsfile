@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker { 
-          image 'debuggerpls/centos7-mk:latest'
-          args '--entrypoint='
+            dockerfile true
         }
     }
     stages {

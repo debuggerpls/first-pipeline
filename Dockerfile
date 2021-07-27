@@ -6,6 +6,3 @@ RUN yum update -y
 RUN yum install jq -y
 RUN pip3 install j2cli j2cli[yaml]
 
-WORKDIR /work
-
-ENTRYPOINT bash
