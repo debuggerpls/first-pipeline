@@ -2,13 +2,15 @@ pipeline {
     agent {
         docker { 
           image 'debuggerpls/centos7-mk:latest'
-          args '--entrypoint= -v $PWD:/work'
+          args '--entrypoint='
         }
     }
     stages {
         stage('Build') {
             steps {
                 sh '''
+                  ls -alh
+                  pwd
                   make -C $PWD/mk B=$PWD/build/mk
                   export mk=$PWD/build/mk
 
