@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'debuggerpls/centos7:mk:latest' }
+        docker { image 'debuggerpls/centos7-mk:latest' }
     }
     stages {
         stage('Test') {
