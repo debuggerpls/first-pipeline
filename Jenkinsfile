@@ -16,10 +16,18 @@ pipeline {
                 '''
             }
         }
+        stage('Copy artifacts') {
+            steps {
+              sh '''
+                mkdir /artifacts
+                cp $PWD/build/mk/images/*.iso /artifacts
+              '''
+            }
+        }
     }
     post {
         success {
-            archiveArtifacts artifacts: '$PWD/build/mk/images/*.iso'
+            archiveArtifacts artifacts: 'artifacts/*.iso'
         }
         always {
             deleteDir()
