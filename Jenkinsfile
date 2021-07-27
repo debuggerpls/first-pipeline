@@ -21,5 +21,8 @@ pipeline {
         always {
             deleteDir() 
         }
+        success {
+            archiveArtifacts artifacts: '$PWD/build/mk/images/*.iso'
+        }
     }
 }
