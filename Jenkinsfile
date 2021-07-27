@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                  useradd test
+                  sudo useradd test
                   su test
 
                   git clone https://github.com/kernkonzept/mk.git
