@@ -6,6 +6,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                  useradd test
+                  su test
+
                   git clone https://github.com/kernkonzept/mk.git
                   make -C $PWD/mk B=$PWD/build/mk
                   export mk=$PWD/build/mk
