@@ -1,0 +1,75 @@
+   0 apk update
+   1 git
+   2 apk install git
+   3 apk --help
+   4 apk add git
+   5 git clone https://github.com/kernkonzept/mk.git
+   6 rm -rf mk/
+   7 cd home/
+   8 ls
+   9 mkdir deividas
+  10 cd deividas/
+  11 ls
+  12 git clone https://github.com/kernkonzept/mk.git
+  13 cd mk/
+  14 ls
+  15 make B=../build
+  16 apk add make
+  17 make B=../build
+  18 ls ../
+  19 make B=/home/deividas/build
+  20 apk add bash
+  21 make B=/home/deividas/build
+  22 apk add perl
+  23 make B=/home/deividas/build
+  24 apk add gcc
+  25 make B=/home/deividas/build
+  26 apk add g++-multilib
+  27 apk search multilib
+  28 apk add g++
+  29 make B=/home/deividas/build
+  30 apk add flex
+  31 make B=/home/deividas/build
+  32 apk add bison
+  33 make B=/home/deividas/build
+  34 apk add gawk
+  35 apk add tput
+  36 make B=/home/deividas/build
+  37 apk add ncurses
+  38 make B=/home/deividas/build
+  39 cd ../build/
+  40 ls
+  41 history
+  42 cat config/
+  43 cat source/conf/modules.list 
+  44 make grub2iso E=hello
+  45 touch /tmp/fiasco
+  46 make grub2iso E=hello
+  47 make grub2iso E=hello MODULE_PATH=/tmp
+  48 make grub2iso E=hello MODULEs_PATH=/tmp
+  49 make grub2iso E=hello MODULES_PATH=/tmp
+  50 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  51 touch /tmp/sigma0
+  52 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  53 touch /tmp/moe
+  54 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  55 touch /tmp/l4re
+  56 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  57 touch /tmp/hello
+  58 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  59 touch /tmp/bootstrap
+  60 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  61 apk add grub2-mkrescue
+  62 apk search grub2
+  63 apk add grub2
+  64 apk add grub
+  65 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  66 apk add xorriso
+  67 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  68 apk add mtools
+  69 make grub2iso E=hello MODULE_SEARCH_PATH=/tmp
+  70 history
+
+
+  bash-5.1# make -C $mk grub2iso E=hello
+

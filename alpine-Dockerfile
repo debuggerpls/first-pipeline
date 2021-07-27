@@ -1,0 +1,12 @@
+FROM alpine:3.14
+
+RUN apk add --no-cache git make bash perl gcc g++ flex bison gawk ncurses grub xorriso mtools jq py3-pip
+RUN pip3 install j2cli j2cli[yaml]
+RUN git clone https://github.com/kernkonzept/mk.git /work/mk
+RUN make -C /work/mk/ B=/work/build/mk
+
+WORKDIR /work
+
+ENV mk=/work/build/mk
+
+ENTRYPOINT bash

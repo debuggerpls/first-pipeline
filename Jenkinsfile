@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'node:14-alpine' }
+        docker { image 'debuggerpls/centos7:mk:latest' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'jq --help'
             }
         }
     }
