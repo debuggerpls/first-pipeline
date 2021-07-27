@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
           image 'debuggerpls/centos7-mk:latest'
-          args '--entrypoint='
+          args '--entrypoint= -v $PWD:/work'
         }
     }
     stages {
