@@ -6,9 +6,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                  curl -O https://github.com/kernkonzept/mk/archive/refs/heads/master.zip
-                  unzip master.zip
-                  mv -r mk-master mk
                   make -C $PWD/mk B=$PWD/build/mk
                   export mk=$PWD/build/mk
 
