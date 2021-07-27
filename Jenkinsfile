@@ -18,11 +18,11 @@ pipeline {
         }
     }
     post {
-        always {
-            deleteDir() 
-        }
         success {
             archiveArtifacts artifacts: '$PWD/build/mk/images/*.iso'
+        }
+        always {
+            deleteDir()
         }
     }
 }
